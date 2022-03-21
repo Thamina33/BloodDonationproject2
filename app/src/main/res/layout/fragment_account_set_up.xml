@@ -34,11 +34,10 @@
                     android:id="@+id/profile_image"
                     android:layout_width="96dp"
                     android:layout_height="96dp"
-                    android:src="@drawable/ic_launcher_background"
+                    android:src="@drawable/ic_logo"
                     android:layout_gravity="center"
                     android:layout_marginTop="40dp"
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="@color/pink_bg"/>
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -60,27 +59,20 @@
             </LinearLayout>
 
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginTop="48dp"
-                android:id="@+id/outlinedTextField"
+            <EditText
+                android:layout_marginTop="32dp"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:hint="@string/phone"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:inputType="phone"
-                    android:textColor="@color/gray_light"
-                    android:drawablePadding="8dp"
-                    android:text="@string/ph"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
+                android:inputType="phone"
+                android:textSize="16sp"
+                android:background="@drawable/grey_bg"
+                android:textColor="@color/p_txt"
+                android:paddingStart="16dp"
+                android:paddingEnd="4dp"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -97,42 +89,34 @@
                     android:textSize="16sp"
                     android:layout_gravity="center"
                     android:textStyle="normal"
-                    android:textColor="@color/gray_dark"/>
+                    android:textColor="@color/p_txt"/>
                 <Spinner
                     android:layout_height="48dp"
                     android:layout_width="match_parent"
                     android:layout_marginStart="16dp"
                     android:prompt="@string/bld_grp"
                     android:entries="@array/blood_group"
-                    android:background="@drawable/pink_border_bg"
+                    android:paddingStart="16dp"
+                    android:background="@drawable/grey_bg"
                     >
 
                 </Spinner>
             </LinearLayout>
-            <com.google.android.material.textfield.TextInputLayout
+            <EditText
                 android:layout_marginTop="8dp"
-                android:id="@+id/location"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
                 android:layout_height="wrap_content"
+                android:minLines="2"
                 android:hint="@string/address"
-                android:backgroundTint="@color/gray_light"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:textSize="16sp"
-                    android:inputType="textMultiLine"
-                    android:minLines="2"
-                    android:textColor="@color/gray_light"
-                    android:drawablePadding="8dp"
-                    android:text="@string/location"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
+                android:inputType="textMultiLine"
+                android:textSize="16sp"
+                android:background="@drawable/grey_bg"
+                android:textColor="@color/p_txt"
+                android:paddingStart="16dp"
+                android:paddingEnd="4dp"
+                />
 
             <com.google.android.material.checkbox.MaterialCheckBox
                 android:layout_width="wrap_content"
@@ -142,21 +126,22 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
-                app:buttonTint="@color/pink_bg"/>
+                app:buttonTint="@color/pink"/>
         </LinearLayout>
     </ScrollView>
 
     <com.google.android.material.button.MaterialButton
-        android:layout_width="120dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginLeft="48dp"
         android:backgroundTint="@color/orange"
         android:text="@string/ok_done"
-        android:textAllCaps="false"
+        android:textAllCaps="true"
         android:textSize="16sp"
-        app:cornerRadius="8dp"
-        android:layout_gravity="bottom|end"
+        app:cornerRadius="24dp"
+        android:layout_gravity="bottom|center_horizontal"
         android:textStyle="bold"/>
 
 </FrameLayout>

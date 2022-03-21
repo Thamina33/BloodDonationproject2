@@ -15,7 +15,9 @@
         app:cardBackgroundColor="@color/white"
         app:layout_constraintTop_toTopOf="parent">
        <RelativeLayout
-           android:layout_margin="16dp"
+           android:layout_marginStart="16dp"
+           android:layout_marginTop="16dp"
+           android:layout_marginBottom="16dp"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            >
@@ -28,16 +30,16 @@
                android:textColor="@color/gray_light"
                android:textSize="20sp"
                android:textStyle="bold" />
+
            <TextView
                android:id="@+id/name"
-               android:layout_below="@+id/text1"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:textColor="@color/txt_black"
-               android:textSize="20sp"
-               android:textStyle="normal"
+               android:layout_below="@+id/text1"
                android:text="@string/dummy123"
-               />
+               android:textColor="@color/p_txt"
+               android:textSize="20sp"
+               android:textStyle="normal" />
            <TextView
                android:id="@+id/text2"
                android:layout_width="wrap_content"
@@ -49,87 +51,100 @@
                android:textStyle="bold"
                android:text="@string/location_l"
                />
+
            <TextView
                android:id="@+id/location"
-               android:layout_below="@+id/text2"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:textColor="@color/txt_black"
-               android:textSize="20sp"
-               android:textStyle="normal"
+               android:layout_below="@+id/text2"
                android:text="@string/location"
-               />
+               android:textColor="@color/p_txt"
+               android:textSize="20sp"
+               android:textStyle="normal" />
+
+           <com.google.android.material.divider.MaterialDivider
+               android:id="@+id/divider"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginStart="16dp"
+               android:layout_marginEnd="32dp"
+               android:background="@drawable/pink_orange"
+               android:layout_below="@id/location"
+               android:layout_marginTop="8dp" />
 
            <TextView
                android:id="@+id/time_counter"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:layout_below="@+id/location"
+               android:layout_below="@+id/divider"
                android:layout_marginTop="12dp"
                android:text="@string/num_5"
                android:textColor="@color/gray_light"
                android:textSize="20sp"
                android:textStyle="bold" />
+
            <TextView
                android:id="@+id/text3"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:layout_toEndOf="@+id/time_counter"
-               android:layout_below="@+id/location"
+               android:layout_below="@+id/divider"
                android:layout_marginStart="8dp"
                android:layout_marginTop="12dp"
+               android:layout_toEndOf="@+id/time_counter"
+               android:text="@string/min_ago"
                android:textColor="@color/gray_light"
                android:textSize="20sp"
-               android:textStyle="bold"
-               android:text="@string/min_ago"
-               />
+               android:textStyle="bold" />
 
            <ImageView
                android:id="@+id/chat"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_below="@+id/location"
+               android:layout_width="32dp"
+               android:layout_height="32dp"
+               android:layout_below="@+id/divider"
                android:layout_alignParentEnd="true"
-               android:layout_marginStart="8dp"
                android:layout_marginTop="12dp"
+               android:layout_marginEnd="8dp"
                android:background="@drawable/ic_baseline_chat_24" />
+
            <FrameLayout
-               android:layout_alignParentEnd="true"
                android:layout_width="120dp"
-               android:layout_marginTop="16dp"
-               android:background="@drawable/pink_orange_shape"
-               android:layout_height="wrap_content">
+               android:layout_height="wrap_content"
+               android:layout_alignParentEnd="true"
+               android:layout_marginTop="2dp"
+               android:background="@drawable/pink_orange_shape">
+
                <LinearLayout
                    android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
                    android:layout_gravity="start|center"
-                   android:layout_marginStart="16dp"
                    android:layout_margin="8dp"
-                   android:background="@drawable/white_round"
-                   android:layout_height="wrap_content">
+                   android:layout_marginStart="16dp"
+                   android:background="@drawable/white_round">
+
                    <TextView
                        android:id="@+id/blood_grp"
-                       android:layout_margin="4dp"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:layout_margin="4dp"
                        android:backgroundTint="@color/white"
+                       android:gravity="center"
                        android:text="@string/a"
                        android:textColor="@color/pink"
                        android:textSize="16sp"
-                       android:layout_gravity="center"
-                       android:gravity="center"
                        android:textStyle="bold" />
                </LinearLayout>
 
                <TextView
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
+                   android:layout_gravity="center|end"
+                   android:layout_marginEnd="8dp"
                    android:backgroundTint="@color/white"
+                   android:gravity="center|end"
                    android:text="needed"
                    android:textColor="@color/white"
                    android:textSize="16sp"
-                   android:layout_marginEnd="8dp"
-                   android:layout_gravity="center|end"
-                   android:gravity="center|end"
                    android:textStyle="bold" />
            </FrameLayout>
        </RelativeLayout>

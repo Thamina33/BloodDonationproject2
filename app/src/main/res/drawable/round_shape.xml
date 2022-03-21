@@ -7,6 +7,6 @@
         android:startColor="@color/pink"
         android:endColor="@color/orange"/>
     <corners
-        android:bottomLeftRadius="216dp"
-        android:bottomRightRadius="216dp"/>
+        android:bottomLeftRadius="180dp"
+        android:bottomRightRadius="180dp"/>
 </shape>
