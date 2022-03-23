@@ -118,8 +118,8 @@
             android:textStyle="normal" />
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginBottom="16dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="64dp"
             android:layout_marginRight="48dp"
             android:layout_marginLeft="48dp"
             android:backgroundTint="@color/orange"
@@ -127,8 +127,10 @@
             android:textAllCaps="true"
             android:textSize="16sp"
             app:cornerRadius="24dp"
+
             android:layout_alignParentBottom="true"
             android:textStyle="bold"/>
+
     </RelativeLayout>
 
 </FrameLayout>

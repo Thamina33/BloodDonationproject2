@@ -32,6 +32,11 @@
     <string name="don_t_have_an_account_1">Don’t have an account?</string>
     <string name="give_blood_save_life">Give Blood, Save Life</string>
     <string name="update">Update</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="create_your_blood_request">Create Your Blood Request</string>
+    <string name="submit">Submit</string>
+    <string name="hospital_name">Hospital Name</string>
     <string-array name="blood_group">
         <item>A+</item>
         <item>B+</item>

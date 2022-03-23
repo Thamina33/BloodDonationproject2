@@ -39,6 +39,7 @@
                     android:layout_marginTop="40dp"
                     />
                 <TextView
+                    android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -48,6 +49,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
                 <TextView
+                    android:id="@+id/mail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -60,6 +62,7 @@
 
 
             <EditText
+                android:id="@+id/ph"
                 android:layout_marginTop="32dp"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="32dp"
@@ -91,6 +94,7 @@
                     android:textStyle="normal"
                     android:textColor="@color/p_txt"/>
                 <Spinner
+                    android:id="@+id/blood_grp"
                     android:layout_height="48dp"
                     android:layout_width="match_parent"
                     android:layout_marginStart="16dp"
@@ -103,6 +107,7 @@
                 </Spinner>
             </LinearLayout>
             <EditText
+                android:id="@+id/address"
                 android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="32dp"
@@ -119,6 +124,7 @@
                 />
 
             <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/do_you_want_to_donate_your_blood"
@@ -131,6 +137,7 @@
     </ScrollView>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/donate_btn"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"

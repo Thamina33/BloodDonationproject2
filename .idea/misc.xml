@@ -22,7 +22,19 @@
         <entry key="..\:/androidprojects/BloodDonationproject2/app/src/main/res/layout/fragment_sign_in.xml" value="0.25" />
         <entry key="..\:/androidprojects/BloodDonationproject2/app/src/main/res/layout/fragment_sign_up.xml" value="0.25" />
         <entry key="..\:/androidprojects/BloodDonationproject2/app/src/main/res/layout/row_for_help_post.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2185" />
+        <entry key="app/src/main/res/drawable/ic_baseline_local_hospital_24.xml" value="0.22" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2185" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.28489583333333335" />
+        <entry key="app/src/main/res/layout/fragment_account_set_up.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/fragment_blood_request.xml" value="0.28489583333333335" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28489583333333335" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.28489583333333335" />
+        <entry key="app/src/main/res/layout/fragment_sign_in.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.28489583333333335" />
+        <entry key="app/src/main/res/layout/row_for_help_post.xml" value="0.28489583333333335" />
+        <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.28489583333333335" />
+        <entry key="app/src/main/res/menu/bottom_nevigation.xml" value="0.28489583333333335" />
       </map>
     </option>
   </component>

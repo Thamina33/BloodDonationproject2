@@ -46,6 +46,7 @@
         android:textStyle="bold"
         android:textColor="@color/pink"/>
     <EditText
+        android:id="@+id/email"
         android:layout_marginTop="48dp"
         android:layout_width="match_parent"
         android:layout_marginLeft="32dp"
@@ -60,6 +61,7 @@
         android:paddingEnd="4dp"
         />
     <EditText
+        android:id="@+id/pass"
         android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_marginLeft="32dp"
@@ -80,19 +82,20 @@
         android:layout_marginRight="48dp"
         android:layout_marginLeft="48dp"
         android:backgroundTint="@color/pink"
+        android:id="@+id/signIn"
         android:text="@string/sign_in"
         android:textSize="16sp"
         app:cornerRadius="24dp"
         android:textStyle="bold"/>
     <LinearLayout
+        android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
        android:layout_gravity="end"
         android:gravity="end"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginStart="16dp"
         android:orientation="horizontal">
       <TextView
           android:layout_width="wrap_content"

@@ -18,7 +18,7 @@
             android:layout_gravity="start"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
-            android:text="Create Your Blood Request"
+            android:text="@string/create_your_blood_request"
             android:textColor="@color/gray_dark"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -44,6 +44,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ph"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_baseline_local_phone_24"
@@ -68,11 +69,11 @@
             android:textStyle="bold"
             android:textColor="@color/gray_dark"/>
         <Spinner
+            android:id="@+id/blood_grp"
             android:layout_height="48dp"
             android:layout_width="match_parent"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            
             android:layout_marginTop="2dp"
             android:prompt="@string/bld_grp"
             android:entries="@array/blood_group"
@@ -84,7 +85,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:text="@string/name"
+            android:text="@string/hospital_name"
+            android:layout_marginStart="32dp"
+            android:textColor="@color/gray_dark"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hospitalnName"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gray_light"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_local_hospital_24"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:textColor="@color/gray_light"
+                android:drawablePadding="8dp"
+                android:text="@string/location"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Address"
             android:layout_marginStart="32dp"
             android:textColor="@color/gray_dark"
             android:textSize="16sp"
@@ -100,6 +133,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_outline_location_on_24"
@@ -113,13 +147,14 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/subit_btn"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="56dp"
             android:layout_marginStart="56dp"
             android:backgroundTint="@color/pink"
-            android:text="Submit"
+            android:text="@string/submit"
             android:textAllCaps="false"
             android:textSize="16sp"
             app:cornerRadius="8dp"
