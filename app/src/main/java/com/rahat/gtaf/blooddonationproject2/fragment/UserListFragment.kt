@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -20,10 +22,12 @@ import com.rahat.gtaf.blooddonationproject2.model.ReqModel
 
 
 class UserListFragment : Fragment(), UserListAdapter.Interaction {
-
+    var bg: String = "ALL"
+    val list_of_items = arrayListOf<String>("ALL", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-")
     private lateinit var binding: FragmentUserListBinding
     private lateinit var mAdapter: UserListAdapter
     private var userlist: MutableList<ProfileModel> = mutableListOf()
+    private var fillertedUserlist: MutableList<ProfileModel> = mutableListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,7 +46,47 @@ class UserListFragment : Fragment(), UserListAdapter.Interaction {
             layoutManager = LinearLayoutManager(binding.root.context)
         }
 
+        loadBloodGroup()
         loadedEvents()
+
+
+    }
+
+    private fun loadBloodGroup() {
+        val aa = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, list_of_items)
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.bloodGrp.adapter = aa
+
+        binding.bloodGrp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+
+                bg = list_of_items[position].toString()
+                fillterList(bg)
+
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+        }
+    }
+
+    private fun fillterList(bg: String) {
+        fillertedUserlist.clear()
+        for (item in userlist) {
+            if (bg == "ALL") {
+                fillertedUserlist.add(item)
+            } else if (bg == item.bg) {
+                fillertedUserlist.add(item)
+            }
+
+            mAdapter.submitList(ArrayList(fillertedUserlist))
+        }
 
     }
 
