@@ -6,6 +6,7 @@ data class ProfileModel (
     val mail : String="",
     val phone : String="",
     val address : String="",
+    val bg : String="",
     val isDonate : Boolean=false,
     )
 

@@ -119,20 +119,21 @@
             android:textColor="@color/txt_black"
             android:textSize="18sp"
             android:textStyle="normal" />
+
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:layout_marginBottom="64dp"
-            android:layout_marginRight="48dp"
+            android:layout_alignParentBottom="true"
             android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginBottom="64dp"
             android:backgroundTint="@color/orange"
             android:text="@string/update"
             android:textAllCaps="true"
             android:textSize="16sp"
-            app:cornerRadius="24dp"
-
-            android:layout_alignParentBottom="true"
-            android:textStyle="bold"/>
+            android:visibility="invisible"
+            android:textStyle="bold"
+            app:cornerRadius="24dp" />
 
     </RelativeLayout>
 

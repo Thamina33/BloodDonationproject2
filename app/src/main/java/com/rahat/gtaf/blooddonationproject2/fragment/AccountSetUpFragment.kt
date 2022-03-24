@@ -48,6 +48,7 @@ class AccountSetUpFragment : Fragment() {
             hashMap["phone"] = phone
             hashMap["address"] = address
             hashMap["isDonate"] = isDonate
+            hashMap["bg"] = bg
             hashMap["uid"] = uid
             hashMap["mail"] = arguments?.getString("mail").toString()
             hashMap["name"] = arguments?.getString("name").toString()
