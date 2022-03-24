@@ -37,6 +37,7 @@
     <string name="create_your_blood_request">Create Your Blood Request</string>
     <string name="submit">Submit</string>
     <string name="hospital_name">Hospital Name</string>
+    <string name="user_name">User Name</string>
     <string-array name="blood_group">
         <item>A+</item>
         <item>B+</item>
