@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Programing Hero/BloodDonationproject2/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1895" />
+        <entry key="..\:/Programing Hero/BloodDonationproject2/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1895" />
+        <entry key="..\:/Programing Hero/BloodDonationproject2/app/src/main/res/drawable/white_round.xml" value="0.1895" />
+        <entry key="..\:/Programing Hero/BloodDonationproject2/app/src/main/res/layout/fragment_account_set_up.xml" value="0.34375" />
+        <entry key="..\:/Programing Hero/BloodDonationproject2/app/src/main/res/layout/fragment_blood_request.xml" value="0.34375" />
+        <entry key="..\:/Programing Hero/BloodDonationproject2/app/src/main/res/layout/fragment_blood_request_list.xml" value="0.34375" />
+        <entry key="..\:/Programing Hero/BloodDonationproject2/app/src/main/res/layout/fragment_home.xml" value="0.34375" />
+        <entry key="..\:/Programing Hero/BloodDonationproject2/app/src/main/res/layout/fragment_profile.xml" value="0.34375" />
+        <entry key="..\:/Programing Hero/BloodDonationproject2/app/src/main/res/layout/fragment_sign_up.xml" value="0.34375" />
+        <entry key="..\:/Programing Hero/BloodDonationproject2/app/src/main/res/layout/fragment_splash_screen.xml" value="0.34375" />
+        <entry key="..\:/Programing Hero/BloodDonationproject2/app/src/main/res/layout/row_for_help_post.xml" value="0.34375" />
+        <entry key="..\:/Programing Hero/BloodDonationproject2/app/src/main/res/menu/menu_bottom_main.xml" value="0.34375" />
         <entry key="..\:/androidprojects/BloodDonationproject2/app/src/main/res/drawable/grey_bg.xml" value="0.174" />
         <entry key="..\:/androidprojects/BloodDonationproject2/app/src/main/res/drawable/ic_baseline_chat_24.xml" value="0.1765" />
         <entry key="..\:/androidprojects/BloodDonationproject2/app/src/main/res/drawable/ic_baseline_local_phone_24.xml" value="0.1745" />

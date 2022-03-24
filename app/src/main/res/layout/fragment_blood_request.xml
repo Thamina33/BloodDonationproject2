@@ -52,7 +52,7 @@
                 android:inputType="phone"
                 android:textColor="@color/gray_light"
                 android:drawablePadding="8dp"
-                android:text="@string/ph"
+                android:hint="@string/ph"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -92,7 +92,7 @@
             android:layout_marginTop="8dp"
             android:textStyle="bold" />
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/hospitalnName"
+
             android:layout_width="match_parent"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
@@ -101,7 +101,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-
+                android:id="@+id/hospitalnName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_baseline_local_hospital_24"
@@ -109,7 +109,6 @@
                 android:inputType="text"
                 android:textColor="@color/gray_light"
                 android:drawablePadding="8dp"
-                android:text="@string/location"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -117,14 +116,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:text="Address"
+            android:text="Location"
             android:layout_marginStart="32dp"
             android:textColor="@color/gray_dark"
             android:textSize="16sp"
             android:layout_marginTop="8dp"
             android:textStyle="bold" />
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/location"
+
             android:layout_width="match_parent"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
@@ -133,7 +132,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-
+                android:id="@+id/location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_outline_location_on_24"
@@ -142,7 +141,6 @@
                 android:minLines="2"
                 android:textColor="@color/gray_light"
                 android:drawablePadding="8dp"
-                android:text="@string/location"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>

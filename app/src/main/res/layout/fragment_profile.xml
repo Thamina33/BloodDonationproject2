@@ -19,16 +19,20 @@
             android:layout_alignParentTop="true"
             android:contentDescription="@string/name"
             />
+
         <ImageView
             android:id="@+id/edit"
-            android:contentDescription="@string/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_baseline_edit_24"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_margin="16dp"
-            />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/ic_baseline_edit_24"
+            android:contentDescription="@string/name" />
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="96dp"
@@ -51,8 +55,7 @@
             android:text="@string/dummy123"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/blood_grp"

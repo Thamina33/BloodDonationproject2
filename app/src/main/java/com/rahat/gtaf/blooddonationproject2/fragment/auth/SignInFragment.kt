@@ -1,4 +1,4 @@
-package com.rahat.gtaf.blooddonationproject2.fragment
+package com.rahat.gtaf.blooddonationproject2.fragment.auth
 
 import android.content.Context
 import android.os.Bundle
@@ -9,10 +9,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
 import com.rahat.gtaf.blooddonationproject2.R
 import com.rahat.gtaf.blooddonationproject2.databinding.FragmentSignInBinding
-import com.rahat.gtaf.blooddonationproject2.databinding.FragmentSignUpBinding
 
 
 class SignInFragment : Fragment() {
@@ -41,21 +39,23 @@ class SignInFragment : Fragment() {
             val pass = binding.pass.text.toString()
 
             if (email.isNotEmpty() || pass.isNotEmpty()) {
-
                 logInUser(email, pass)
             } else Toast.makeText(ctx, "Error", Toast.LENGTH_SHORT).show()
-            binding.signup.setOnClickListener {
-                findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
-            }
+
 
 
         }
+
+        binding.signup.setOnClickListener {
+            findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+        }
+
     }
 
     private fun logInUser(email: String, pass: String) {
      mAuth.signInWithEmailAndPassword(email,pass).addOnSuccessListener {
 
-     }.addOnSuccessListener(){
+        findNavController().navigate(R.id.action_signInFragment_to_homeFragment)
 
      }
          .addOnFailureListener(){

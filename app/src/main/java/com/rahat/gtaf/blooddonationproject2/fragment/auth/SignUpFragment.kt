@@ -1,13 +1,13 @@
-package com.rahat.gtaf.blooddonationproject2.fragment
+package com.rahat.gtaf.blooddonationproject2.fragment.auth
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.rahat.gtaf.blooddonationproject2.R
@@ -36,6 +36,8 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+
+
         binding.signup.setOnClickListener {
 
             val name = binding.name.text.toString()
@@ -59,15 +61,21 @@ class SignUpFragment : Fragment() {
             email, pass
         ).addOnSuccessListener {
 
+            CreateUserDetail()
+
         }.addOnFailureListener {
             Toast.makeText(ctx, "Error ${it.localizedMessage}", Toast.LENGTH_SHORT).show()
         }
-
 
     }
 
     private fun CreateUserDetail() {
         //
-        findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+        val bundle = bundleOf(
+            "name" to binding.name.text.toString(),
+            "mail" to binding.email.text.toString()
+        )
+
+        findNavController().navigate(R.id.action_signUpFragment_to_accountSetUpFragment , bundle)
     }
 }
