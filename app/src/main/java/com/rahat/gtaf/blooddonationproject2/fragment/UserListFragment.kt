@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.navigation.NavOptionsBuilder
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -92,6 +93,7 @@ class UserListFragment : Fragment(), UserListAdapter.Interaction {
 
     private fun loadedEvents() {
         userlist.clear()
+
         val mref = FirebaseDatabase.getInstance().reference
 
         mref.child(Const.user_path).addValueEventListener(object : ValueEventListener {

@@ -47,6 +47,8 @@ class AccountSetUpFragment : Fragment() {
             val hashMap: HashMap<String, Any> = HashMap()
             hashMap["phone"] = phone
             hashMap["address"] = address
+            hashMap["lat"] = 0.0
+            hashMap["lon"] = 0.0
             hashMap["isDonate"] = isDonate
             hashMap["bg"] = bg
             hashMap["uid"] = uid

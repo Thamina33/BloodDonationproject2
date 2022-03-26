@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/log_out"
+            android:title="Log Out" />
+
+    </group>
+
+
+    <item android:title="More Options">
+
+        <menu>
+
+            <group
+
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/liveMap"
+                    android:title="Doner Map" />
+
+
+
+            </group>
+
+        </menu>
+
+
+    </item>
+
+
+    <item android:title="Information">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/about_us"
+                    android:title="About Us" />
+
+                <item
+                    android:id="@+id/contact"
+                    android:title="Contact Us" />
+
+            </group>
+
+        </menu>
+
+
+    </item>
+
+
+    <item android:title="Others">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+
+                <item
+                    android:id="@+id/rate_us"
+                    android:title="Rate US" />
+
+
+                <item
+                    android:id="@+id/share2"
+                    android:title="Share App" />
+
+            </group>
+
+        </menu>
+
+
+    </item>
+
+
+</menu>
