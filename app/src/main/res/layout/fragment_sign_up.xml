@@ -70,6 +70,7 @@
             android:paddingStart="16dp"
             android:paddingEnd="4dp"
             />
+
         <EditText
             android:id="@+id/pass"
             android:layout_marginTop="8dp"

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.rahat.gtaf.blooddonationproject2.fragment.auth.SignUpFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.auth.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.rahat.gtaf.blooddonationproject2.fragment.HomeFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -31,12 +31,12 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.rahat.gtaf.blooddonationproject2.fragment.ProfileFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.rahat.gtaf.blooddonationproject2.fragment.auth.SignInFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.auth.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
@@ -50,12 +50,12 @@
     </fragment>
     <fragment
         android:id="@+id/blood_requestFragment"
-        android:name="com.rahat.gtaf.blooddonationproject2.fragment.blood_requestFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.blood_requestFragment"
         android:label="fragment_blood_request"
         tools:layout="@layout/fragment_blood_request" />
     <fragment
         android:id="@+id/accountSetUpFragment"
-        android:name="com.rahat.gtaf.blooddonationproject2.fragment.AccountSetUpFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.AccountSetUpFragment"
         android:label="fragment_account_set_up"
         tools:layout="@layout/fragment_account_set_up" >
         <action
@@ -64,7 +64,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.rahat.gtaf.blooddonationproject2.fragment.SplashScreenFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen" >
         <action
@@ -76,7 +76,7 @@
     </fragment>
     <fragment
         android:id="@+id/donorLiveMapFragment"
-        android:name="com.rahat.gtaf.blooddonationproject2.fragment.DonorLiveMapFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.DonorLiveMapFragment"
         android:label="fragment_donor_live_map"
         tools:layout="@layout/fragment_donor_live_map" />
 </navigation>
