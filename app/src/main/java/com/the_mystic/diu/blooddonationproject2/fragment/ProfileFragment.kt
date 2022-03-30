@@ -50,6 +50,7 @@ class ProfileFragment : Fragment() {
                         binding.mail.setText(model?.mail)
                         binding.phone.setText(model?.phone)
                         binding.address.setText(model?.address)
+                        binding.bloodGrp.setText(model?.bg)
 //                    try {
 //                        val downloadURL: String = model.getPp()
 //                        Glide.with(getContext()!!)

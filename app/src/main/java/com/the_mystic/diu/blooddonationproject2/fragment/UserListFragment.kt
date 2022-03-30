@@ -104,6 +104,11 @@ class UserListFragment : Fragment(), UserListAdapter.Interaction {
     private fun fillterList() {
         fillertedUserlist.clear()
         for (item in userlist) {
+
+            /*
+             1st filter with blood group
+             */
+
             if (bg == "ALL") {
                 fillertedUserlist.add(item)
             } else if (bg == item.bg) {
@@ -111,6 +116,9 @@ class UserListFragment : Fragment(), UserListAdapter.Interaction {
             }
 
 
+            /*
+             2nd  filter the district
+             */
 
             if (district.isEmpty()) {
                 fillertedUserlist.add(item)
@@ -118,7 +126,10 @@ class UserListFragment : Fragment(), UserListAdapter.Interaction {
                 fillertedUserlist.add(item)
             }
 
-
+            /*
+             set data onto
+             view
+             */
 
             mAdapter.submitList(ArrayList(fillertedUserlist))
         }

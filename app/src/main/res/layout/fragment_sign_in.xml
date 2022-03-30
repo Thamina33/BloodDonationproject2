@@ -40,7 +40,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/blood_donation"
+        android:text="@string/app_name"
         android:textSize="20sp"
         android:layout_gravity="center"
         android:textStyle="bold"
@@ -69,6 +69,7 @@
         android:layout_height="48dp"
         android:hint="@string/password"
         android:textSize="16sp"
+        android:inputType="textPassword"
         android:background="@drawable/grey_bg"
         android:textColor="@color/p_txt"
         android:paddingStart="16dp"

@@ -33,6 +33,7 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/ic_baseline_edit_24"
             android:contentDescription="@string/name" />
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="96dp"
@@ -51,6 +52,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
+            android:enabled="false"
             android:backgroundTint="@color/pink"
             android:text="@string/dummy123"
             android:textColor="@color/white"
@@ -65,6 +67,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
+            android:enabled="false"
             android:backgroundTint="@color/white"
             android:drawableStart="@drawable/ic_blood"
             android:drawablePadding="16dp"
@@ -81,6 +84,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="@color/white"
+            android:enabled="false"
             android:drawableStart="@drawable/ic_pink_email_24"
             android:drawablePadding="16dp"
             android:text="@string/dummy123_gmail_com"
@@ -98,6 +102,7 @@
             android:backgroundTint="@color/white"
             android:drawableStart="@drawable/ic_baseline_local_phone_24"
             android:drawablePadding="16dp"
+            android:enabled="false"
             android:text="@string/ph"
             android:textColor="@color/txt_black"
             android:textSize="18sp"
@@ -113,6 +118,7 @@
             android:backgroundTint="@color/white"
             android:drawableStart="@drawable/ic_outline_location_on_24"
             android:drawablePadding="16dp"
+            android:enabled="false"
             android:inputType="textMultiLine"
             android:minLines="2"
             android:text="@string/location"

@@ -225,8 +225,11 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.profile -> {
                     // handle click
+                    mAuth = FirebaseAuth.getInstance()
+                    uid = mAuth.uid.toString()
+                    Log.d("TAG", "setDrawerLayout: $uid")
                     val bundle = bundleOf(
-                        "name" to uid,
+                        "uid" to uid,
 
                     )
                     binding.drawer.closeDrawer(GravityCompat.START)

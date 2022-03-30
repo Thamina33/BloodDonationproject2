@@ -103,8 +103,7 @@ class DonorLiveMapFragment : Fragment(), GoogleMap.OnMyLocationButtonClickListen
                         eventModel?.lat?.let { LatLng(it, eventModel.lon) }
                             ?.let {
                                 MarkerOptions().position(it)
-                                    .title("${eventModel.name} (${eventModel.bg})")
-
+                                    .title("${eventModel.name} (${eventModel.bg}) ${eventModel.phone}")
                             }
                             ?.let { map?.addMarker(it) }
 
