@@ -32,7 +32,7 @@ class SplashScreenFragment : Fragment() {
             if (user != null) {
                 // user is logged in  go to main page
 
-                findNavController().navigate(R.id.action_splashScreenFragment_to_homeFragment , null,  NavOptions.Builder()
+                findNavController().navigate(R.id.ac , null,  NavOptions.Builder()
                     .setPopUpTo(R.id.splashScreenFragment, true)
                     .build()
                 )
