@@ -7,10 +7,10 @@
             android:id="@+id/home"
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/home" />
+
         <item
-            android:id="@+id/Newhome"
-            android:icon="@drawable/ic_baseline_home_24"
-            android:title="@string/new_home" />
+            android:id="@+id/profile"
+            android:title="My Profile" />
 
         <item
             android:id="@+id/log_out"

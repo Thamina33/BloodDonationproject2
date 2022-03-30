@@ -31,7 +31,7 @@ android {
         jvmTarget = '1.8'
     }
     buildFeatures {
-        viewBinding = true
+        viewBinding  true
     }
 }
 
@@ -68,15 +68,20 @@ dependencies {
 
     implementation "androidx.fragment:fragment-ktx:1.4.1"
     //image loader
-    implementation 'com.github.bumptech.glide:glide:4.13.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+    implementation 'com.github.bumptech.glide:glide:4.13.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.1'
 
     implementation 'com.google.android.gms:play-services-maps:18.0.2'
     implementation 'com.google.android.gms:play-services-location:19.0.1'
     //lottie animation
-    def lottieVersion = "4.0.0"
+    def lottieVersion = '5.0.3'
     implementation "com.airbnb.android:lottie:$lottieVersion"
-
     implementation 'com.karumi:dexter:6.2.3'
+    implementation 'com.github.kenmeidearu:SearchableSpinner:1.5.5'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
 
 }

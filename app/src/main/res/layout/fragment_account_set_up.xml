@@ -107,6 +107,14 @@
                 </Spinner>
             </LinearLayout>
 
+            <com.kenmeidearu.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/spinner_back" />
+
             <EditText
                 android:id="@+id/address"
                 android:layout_marginTop="8dp"

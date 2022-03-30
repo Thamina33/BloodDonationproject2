@@ -27,6 +27,7 @@
             app:cardCornerRadius="0dp"
             android:layout_width="wrap_content">
             <LinearLayout
+                android:id="@+id/request"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -57,6 +58,7 @@
             app:cardCornerRadius="0dp"
             android:layout_width="wrap_content">
             <LinearLayout
+                android:id="@+id/feeed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -86,6 +88,7 @@
             app:cardCornerRadius="0dp"
             android:layout_width="wrap_content">
             <LinearLayout
+                android:id="@+id/org"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -115,6 +118,7 @@
             app:cardCornerRadius="0dp"
             android:layout_width="wrap_content">
             <LinearLayout
+                android:id="@+id/hospital"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -128,7 +132,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Ambulance"
+                    android:text="Hospital"
                     android:textStyle="normal"
                     android:textSize="18sp"
                     android:textColor="@color/txt_black"
@@ -144,6 +148,7 @@
             app:cardCornerRadius="0dp"
             android:layout_width="wrap_content">
             <LinearLayout
+                android:id="@+id/diease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -157,7 +162,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Thalassemia"
+                    android:text="Disease"
                     android:textStyle="normal"
                     android:textSize="18sp"
                     android:textColor="@color/txt_black"
@@ -172,6 +177,7 @@
             app:cardCornerRadius="0dp"
             android:layout_width="wrap_content">
             <LinearLayout
+                android:id="@+id/donor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">

@@ -28,7 +28,8 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val uid = FirebaseAuth.getInstance().uid.toString()
+
+       val uid  =  arguments?.getString("uid").toString()
         loadProfileData(uid)
     }
 

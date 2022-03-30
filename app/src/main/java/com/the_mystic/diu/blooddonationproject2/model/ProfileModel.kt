@@ -10,6 +10,7 @@ data class ProfileModel(
     val bg: String = "" ,
     val lat: Double = 0.0,
     val lon: Double = 0.0,
+    val district: String = "",
     val isDonate: Boolean = false,
 )
 

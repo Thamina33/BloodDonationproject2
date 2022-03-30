@@ -81,5 +81,51 @@
         android:id="@+id/newHomeFragment"
         android:name="com.the_mystic.diu.blooddonationproject2.fragment.NewHomeFragment"
         android:label="fragment_new_home"
-        tools:layout="@layout/fragment_new_home" />
+        tools:layout="@layout/fragment_new_home" >
+        <action
+            android:id="@+id/action_newHomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_newHomeFragment_to_blood_requestFragment"
+            app:destination="@id/blood_requestFragment" />
+        <action
+            android:id="@+id/action_newHomeFragment_to_bloodRequestListFragment"
+            app:destination="@id/bloodRequestListFragment" />
+        <action
+            android:id="@+id/action_newHomeFragment_to_userListFragment"
+            app:destination="@id/userListFragment" />
+        <action
+            android:id="@+id/action_newHomeFragment_to_hospitalFragment"
+            app:destination="@id/hospitalFragment" />
+        <action
+            android:id="@+id/action_newHomeFragment_to_orgFragment"
+            app:destination="@id/orgFragment" />
+        <action
+            android:id="@+id/action_newHomeFragment_to_dieaseFragment"
+            app:destination="@id/dieaseFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/bloodRequestListFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.BloodRequestListFragment"
+        android:label="fragment_blood_request_list"
+        tools:layout="@layout/fragment_blood_request_list" />
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.UserListFragment"
+        android:label="fragment_user_list"
+        tools:layout="@layout/fragment_user_list" />
+    <fragment
+        android:id="@+id/hospitalFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.HospitalFragment"
+        android:label="fragment_hospital"
+        tools:layout="@layout/fragment_hospital" />
+    <fragment
+        android:id="@+id/orgFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.OrgFragment"
+        android:label="OrgFragment" />
+    <fragment
+        android:id="@+id/dieaseFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.DieaseFragment"
+        android:label="DieaseFragment" />
 </navigation>

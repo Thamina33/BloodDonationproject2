@@ -104,6 +104,7 @@ class DonorLiveMapFragment : Fragment(), GoogleMap.OnMyLocationButtonClickListen
                             ?.let {
                                 MarkerOptions().position(it)
                                     .title("${eventModel.name} (${eventModel.bg})")
+
                             }
                             ?.let { map?.addMarker(it) }
 

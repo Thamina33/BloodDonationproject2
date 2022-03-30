@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fillter By Blood group"
+            android:text="Filter By Blood group"
             android:layout_marginTop="2dp"
             android:textSize="14sp"
             android:layout_gravity="center"
@@ -35,6 +35,36 @@
 
         </Spinner>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter By District"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:textStyle="normal"
+            android:textColor="@color/p_txt"/>
+        <com.kenmeidearu.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/district"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+             />
+    </LinearLayout>
+
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"

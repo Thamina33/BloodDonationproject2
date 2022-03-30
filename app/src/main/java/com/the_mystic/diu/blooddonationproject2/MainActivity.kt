@@ -12,9 +12,14 @@ import android.os.Handler
 import android.os.Looper
 import android.provider.Settings
 import android.util.Log
+import android.view.Gravity
+import android.view.Gravity.RIGHT
 import android.view.View
 import androidx.core.app.ActivityCompat
+import androidx.core.os.bundleOf
 import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout.LOCK_MODE_LOCKED_CLOSED
+import androidx.drawerlayout.widget.DrawerLayout.LOCK_MODE_LOCKED_OPEN
 import androidx.navigation.NavController
 import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
@@ -35,11 +40,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var locationRequest: LocationRequest
     private lateinit var mAuth: FirebaseAuth
     private lateinit var mref: DatabaseReference
+    var uid = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         mAuth = FirebaseAuth.getInstance()
+        uid = mAuth.uid.toString()
         mref = FirebaseDatabase.getInstance().getReference(Const.user_path)
         Dexter.withContext(this)
             .withPermissions(
@@ -72,6 +79,7 @@ class MainActivity : AppCompatActivity() {
             ) {
 
                 binding.toolbar.visibility = View.GONE
+                binding.drawer.setDrawerLockMode(LOCK_MODE_LOCKED_CLOSED, GravityCompat.START)
             } else {
                 binding.toolbar.visibility = View.VISIBLE
             }
@@ -82,6 +90,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
 
     }
 
@@ -203,23 +212,6 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-//        val header: View = binding.navigationView.getHeaderView(0)
-//        val imageViewonDrawerLayoputLayout =
-//            header.findViewById<View>(com.google.android.gms.location.R.id.imageONdrawerLaoout) as CircleImageView
-//        val name = header.findViewById<View>(com.google.android.gms.location.R.id.nameOndrawerLayout) as TextView
-//        val mobile = header.findViewById<View>(com.google.android.gms.location.R.id.mobileNumberOnHeader) as TextView
-//        val addressOnHeader = header.findViewById<View>(com.google.android.gms.location.R.id.addressOnHeader) as TextView
-
-//        addressOnHeader.text = model?.address
-//        name.text = model?.name
-//        mobile.text = model?.ph
-//
-//        Glide.with(applicationContext)
-//            .load(model?.pp)
-//            .error(com.google.android.gms.location.R.drawable.placeholder)
-//            .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-//            .into(imageViewonDrawerLayoputLayout)
-//        //  addresss = header.findViewById<View>(R.id.addressOndrawerLayout) as TextView
 
 
         binding.navigation.setNavigationItemSelectedListener {
@@ -228,13 +220,25 @@ class MainActivity : AppCompatActivity() {
                     // handle click
                     binding.drawer.closeDrawer(GravityCompat.START)
                     val handler = Handler()
-                    handler.postDelayed({ navigationController.navigate(R.id.homeFragment) }, 300)
+                    handler.postDelayed({ navigationController.navigate(R.id.newHomeFragment) }, 300)
+                    true
+                }
+                R.id.profile -> {
+                    // handle click
+                    val bundle = bundleOf(
+                        "name" to uid,
+
+                    )
+                    binding.drawer.closeDrawer(GravityCompat.START)
+                    val handler = Handler()
+                    handler.postDelayed({ navigationController.navigate(R.id.profileFragment , bundle) }, 300)
                     true
                 }
 
                 R.id.log_out -> {
                     // handle click
                     mAuth.signOut()
+                    binding.drawer.closeDrawer(GravityCompat.START)
                     navigationController.navigate(
                         R.id.signInFragment, null, NavOptions.Builder()
                             .setPopUpTo(R.id.splashScreenFragment, true)

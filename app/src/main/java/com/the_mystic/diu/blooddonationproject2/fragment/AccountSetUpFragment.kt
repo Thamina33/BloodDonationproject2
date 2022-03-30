@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.the_mystic.diu.blooddonationproject2.Const
+import com.the_mystic.diu.blooddonationproject2.HelperClass
 import com.the_mystic.diu.blooddonationproject2.R
 import com.the_mystic.diu.blooddonationproject2.databinding.FragmentAccountSetUpBinding
 import com.the_mystic.diu.blooddonationproject2.toast
@@ -20,6 +21,7 @@ class AccountSetUpFragment : Fragment() {
     private lateinit var mauth: FirebaseAuth
     lateinit var binding: FragmentAccountSetUpBinding
     var bg: String = ""
+    var district : String = ""
     val list_of_items = arrayListOf<String>("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,6 +53,7 @@ class AccountSetUpFragment : Fragment() {
             hashMap["isDonate"] = isDonate
             hashMap["bg"] = bg
             hashMap["uid"] = uid
+            hashMap["district"] = district
             hashMap["mail"] = arguments?.getString("mail").toString()
             hashMap["name"] = arguments?.getString("name").toString()
             val ref = FirebaseDatabase.getInstance().getReference(Const.user_path).child(uid);
@@ -64,14 +67,13 @@ class AccountSetUpFragment : Fragment() {
 
         }
 
-
+        loadDistrict()
     }
 
     private fun loadBloodGroup() {
         val aa = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, list_of_items)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.bloodGrp.adapter = aa
-
         binding.bloodGrp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -89,4 +91,30 @@ class AccountSetUpFragment : Fragment() {
             }
         }
     }
+    private fun loadDistrict(){
+        val list = HelperClass.getDistrict(ctx = requireContext())
+
+        val aa = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, list)
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.district.setAdapter(list , 1 ,1 )
+
+
+        binding.district.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+
+                district = list[position].nilai1
+
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+        }
+    }
+
 }

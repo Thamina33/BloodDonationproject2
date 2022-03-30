@@ -13,6 +13,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.the_mystic.diu.blooddonationproject2.Const
+import com.the_mystic.diu.blooddonationproject2.HelperClass
 import com.the_mystic.diu.blooddonationproject2.adapter.UserListAdapter
 import com.the_mystic.diu.blooddonationproject2.databinding.FragmentUserListBinding
 import com.the_mystic.diu.blooddonationproject2.model.ProfileModel
@@ -20,6 +21,7 @@ import com.the_mystic.diu.blooddonationproject2.model.ProfileModel
 
 class UserListFragment : Fragment(), UserListAdapter.Interaction {
     var bg: String = "ALL"
+    var district: String = ""
     val list_of_items = arrayListOf<String>("ALL", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-")
     private lateinit var binding: FragmentUserListBinding
     private lateinit var mAdapter: UserListAdapter
@@ -45,8 +47,34 @@ class UserListFragment : Fragment(), UserListAdapter.Interaction {
 
         loadBloodGroup()
         loadedEvents()
+        loadDistrict()
+
+    }
+
+    private fun loadDistrict(){
+        val list = HelperClass.getDistrict(ctx = binding.root.context)
+
+        val aa = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, list)
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.district.setAdapter(list , 1 ,3 )
 
 
+        binding.district.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+
+                district = list[position].nilai1.toString()
+                fillterList()
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+        }
     }
 
     private fun loadBloodGroup() {
@@ -63,7 +91,7 @@ class UserListFragment : Fragment(), UserListAdapter.Interaction {
             ) {
 
                 bg = list_of_items[position].toString()
-                fillterList(bg)
+                fillterList()
 
             }
 
@@ -73,7 +101,7 @@ class UserListFragment : Fragment(), UserListAdapter.Interaction {
         }
     }
 
-    private fun fillterList(bg: String) {
+    private fun fillterList() {
         fillertedUserlist.clear()
         for (item in userlist) {
             if (bg == "ALL") {
@@ -81,6 +109,16 @@ class UserListFragment : Fragment(), UserListAdapter.Interaction {
             } else if (bg == item.bg) {
                 fillertedUserlist.add(item)
             }
+
+
+
+            if (district.isEmpty()) {
+                fillertedUserlist.add(item)
+            } else if (district == item.district) {
+                fillertedUserlist.add(item)
+            }
+
+
 
             mAdapter.submitList(ArrayList(fillertedUserlist))
         }
