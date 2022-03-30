@@ -59,7 +59,7 @@ class AccountSetUpFragment : Fragment() {
                 "Error ${it.message}".toast(requireContext())
             }.addOnSuccessListener {
                 "User Updated".toast(requireContext())
-                findNavController().navigate(R.id.action_accountSetUpFragment_to_homeFragment)
+                findNavController().navigate(R.id.action_accountSetUpFragment_to_newHomeFragment)
             }
 
         }

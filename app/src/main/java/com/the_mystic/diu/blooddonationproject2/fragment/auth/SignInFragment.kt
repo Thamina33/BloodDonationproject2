@@ -56,7 +56,7 @@ class SignInFragment : Fragment() {
      mAuth.signInWithEmailAndPassword(email,pass)
          .addOnSuccessListener { task ->
          val uid = task.user?.uid
-        findNavController().navigate(R.id.action_signInFragment_to_homeFragment)
+        findNavController().navigate(R.id.action_signInFragment_to_newHomeFragment)
 
      }
          .addOnFailureListener(){

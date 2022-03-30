@@ -39,6 +39,7 @@
     <string name="hospital_name">Hospital Name</string>
     <string name="user_name">User Name</string>
     <string name="google_maps_key">AIzaSyBwghm409l7AEhwftY796hCejSeqJgCLAY</string>
+    <string name="new_home">New Home</string>
     <string-array name="blood_group">
         <item>A+</item>
         <item>B+</item>

@@ -40,13 +40,11 @@
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
-            android:id="@+id/action_signInFragment_to_homeFragment"
-            app:popUpToInclusive="true"
-            app:popUpTo="@id/homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
             android:id="@+id/action_signInFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_newHomeFragment"
+            app:destination="@id/newHomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/blood_requestFragment"
@@ -59,8 +57,8 @@
         android:label="fragment_account_set_up"
         tools:layout="@layout/fragment_account_set_up" >
         <action
-            android:id="@+id/action_accountSetUpFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_accountSetUpFragment_to_newHomeFragment"
+            app:destination="@id/newHomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
@@ -71,12 +69,17 @@
             android:id="@+id/action_splashScreenFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
         <action
-            android:id="@+id/action_splashScreenFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_splashScreenFragment_to_newHomeFragment"
+            app:destination="@id/newHomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/donorLiveMapFragment"
         android:name="com.the_mystic.diu.blooddonationproject2.fragment.DonorLiveMapFragment"
         android:label="fragment_donor_live_map"
         tools:layout="@layout/fragment_donor_live_map" />
+    <fragment
+        android:id="@+id/newHomeFragment"
+        android:name="com.the_mystic.diu.blooddonationproject2.fragment.NewHomeFragment"
+        android:label="fragment_new_home"
+        tools:layout="@layout/fragment_new_home" />
 </navigation>
