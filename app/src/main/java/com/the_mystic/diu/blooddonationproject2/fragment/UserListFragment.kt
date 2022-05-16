@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -115,24 +116,25 @@ class UserListFragment : Fragment(), UserListAdapter.Interaction {
                 fillertedUserlist.add(item)
             }
 
+        }
 
-            /*
-             2nd  filter the district
-             */
+        val newList :MutableList<ProfileModel> = mutableListOf()
+        newList.addAll(fillertedUserlist)
+
+
+        for (item in fillertedUserlist) {
 
             if (district.isEmpty()) {
-                fillertedUserlist.add(item)
+                newList.add(item)
             } else if (district == item.district) {
-                fillertedUserlist.add(item)
+                newList.add(item)
             }
-
-            /*
-             set data onto
-             view
-             */
-
-            mAdapter.submitList(ArrayList(fillertedUserlist))
         }
+
+
+
+        mAdapter.submitList(null)
+        mAdapter.submitList(ArrayList(newList))
 
     }
 

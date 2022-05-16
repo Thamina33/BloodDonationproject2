@@ -51,12 +51,12 @@ class HospitalFragment : Fragment(), HospitalModelListAdapter.Interaction {
 
         val mref = FirebaseDatabase.getInstance().reference
 
-        mref.child(Const.hospital).addValueEventListener(object : ValueEventListener {
+        mref.child(Const.hospital).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 hospitalList.clear()
+
                 for (ds in dataSnapshot.children) {
                     val eventModel: HospitalModel? = ds.getValue(HospitalModel::class.java)
-
                     if (eventModel != null) {
                         hospitalList.add(eventModel)
                     }

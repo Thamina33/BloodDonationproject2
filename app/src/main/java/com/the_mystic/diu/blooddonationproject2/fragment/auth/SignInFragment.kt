@@ -43,7 +43,6 @@ class SignInFragment : Fragment() {
             } else Toast.makeText(ctx, "Error", Toast.LENGTH_SHORT).show()
 
 
-
         }
 
         binding.signup.setOnClickListener {
@@ -53,14 +52,13 @@ class SignInFragment : Fragment() {
     }
 
     private fun logInUser(email: String, pass: String) {
-     mAuth.signInWithEmailAndPassword(email,pass)
-         .addOnSuccessListener { task ->
-         val uid = task.user?.uid
-        findNavController().navigate(R.id.action_signInFragment_to_newHomeFragment)
+        mAuth.signInWithEmailAndPassword(email, pass)
+            .addOnSuccessListener { task ->
+                val uid = task.user?.uid
+                findNavController().navigate(R.id.action_signInFragment_to_newHomeFragment)
 
-     }
-         .addOnFailureListener(){
-         Toast.makeText(ctx, "Error ${it.localizedMessage}", Toast.LENGTH_SHORT).show()
-     }
+            }.addOnFailureListener() {
+                Toast.makeText(ctx, "Error ${it.localizedMessage}", Toast.LENGTH_SHORT).show()
+            }
     }
 }

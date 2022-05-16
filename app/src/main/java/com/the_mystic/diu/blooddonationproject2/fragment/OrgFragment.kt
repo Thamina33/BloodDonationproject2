@@ -11,11 +11,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.the_mystic.diu.blooddonationproject2.Const
-import com.the_mystic.diu.blooddonationproject2.R
-import com.the_mystic.diu.blooddonationproject2.adapter.HospitalModelListAdapter
 import com.the_mystic.diu.blooddonationproject2.adapter.OrgListAdapter
 import com.the_mystic.diu.blooddonationproject2.databinding.FragmentOrgBinding
-import com.the_mystic.diu.blooddonationproject2.model.HospitalModel
 import com.the_mystic.diu.blooddonationproject2.model.OrgModel
 
 

@@ -20,7 +20,6 @@ class HelperClass {
                 disList =
                     Gson().fromJson(jsonStr, object : TypeToken<List<LocationModel>>() {}.type)
             }
-
             val newList = ArrayList<mListString>()
 
             for (item in disList) {

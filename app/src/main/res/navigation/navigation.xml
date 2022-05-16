@@ -103,6 +103,9 @@
         <action
             android:id="@+id/action_newHomeFragment_to_dieaseFragment"
             app:destination="@id/dieaseFragment" />
+        <action
+            android:id="@+id/action_newHomeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
 
     </fragment>
     <fragment
@@ -122,10 +125,12 @@
         tools:layout="@layout/fragment_hospital" />
     <fragment
         android:id="@+id/orgFragment"
+        tools:layout="@layout/fragment_org"
         android:name="com.the_mystic.diu.blooddonationproject2.fragment.OrgFragment"
         android:label="OrgFragment" />
     <fragment
         android:id="@+id/dieaseFragment"
+        tools:layout="@layout/fragment_diease"
         android:name="com.the_mystic.diu.blooddonationproject2.fragment.DieaseFragment"
         android:label="DieaseFragment" />
 </navigation>

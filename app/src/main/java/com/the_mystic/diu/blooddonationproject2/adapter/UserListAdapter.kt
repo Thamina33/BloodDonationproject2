@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.DiffUtil
 import com.the_mystic.diu.blooddonationproject2.R
 import com.the_mystic.diu.blooddonationproject2.databinding.RowForUserListBinding
 import com.the_mystic.diu.blooddonationproject2.model.ProfileModel
+import java.util.ArrayList
 
 class UserListAdapter(private val interaction: Interaction? = null) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -52,8 +53,8 @@ class UserListAdapter(private val interaction: Interaction? = null) :
         return differ.currentList.size
     }
 
-    fun submitList(list: List<ProfileModel>) {
-        differ.submitList(list)
+    fun submitList(list: List<ProfileModel>?) {
+        differ.submitList(list?.let { ArrayList(it) })
     }
 
     class ReqViewholder

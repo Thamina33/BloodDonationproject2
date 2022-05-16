@@ -15,6 +15,7 @@ import android.util.Log
 import android.view.Gravity
 import android.view.Gravity.RIGHT
 import android.view.View
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.GravityCompat
@@ -92,6 +93,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+
     }
 
     private fun getCurrentLocations() {
@@ -127,6 +129,9 @@ class MainActivity : AppCompatActivity() {
 
             } else {
                 "Turn On Location".toast(this)
+
+
+
                 val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
                 startActivity(intent)
             }
